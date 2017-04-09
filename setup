@@ -50,3 +50,6 @@ else
     echo "Your password is $yourPW.\nStart installing......"
     setup
 fi
+
+
+#libapache2-mod-php php-mysql /service mysql restart/  /service apache2 restart/
