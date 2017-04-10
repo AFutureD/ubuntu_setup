@@ -2,12 +2,12 @@
 
 setup (){
     #chang your database password here.
-    yourPW='dhn78834'
+    yourPW=''
 
     sudo apt-get -y install vim
     sudo apt-get -y install rar unrar
     sudo apt-get -y install git
-    sudo apt-get -y install Python3
+    sudo apt-get -y install python3  python3-pip
     sudo apt-get -y install openssh-server openssh-client
 
     #start to install mysql
@@ -16,10 +16,9 @@ setup (){
     sudo apt-get -y install mysql-server mysql-client
 
     #start to install php and apache2
-    sudo apt-get -y install apache2 libapache2-mod-auth-mysql
-    sudo apt-get -y install php5 libapache2-mod-php5
-    sudo apt-get -y install php5-mysql php5-curl php5-gd php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
-    sudo echo "<?php\nphpinfo()\n?>" > /var/www/html/info.php
+    sudo apt-get -y install apache2 
+    sudo apt-get -y install php5 libapache2-mod-php php-mysql
+    sudo sh -c 'echo "<?php\nphpinfo()\n?>" >> /var/www/html/info.php'
     sudo /etc/init.d/apache2 restart
 
     #change sources to tsinghua's
@@ -33,9 +32,8 @@ setup (){
     sudo sh -c 'echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse" >> /etc/apt/sources.list'
 
     # change hosts
-    git clone https://github.com/DongFrancis/own_setup.git own_setup
     sudo rm -f /etc/hosts
-    sudo mv own_setup/hosts /etc/hosts
+    sudo mv hosts /etc/hosts
 
     echo -e "All installations Over!!\n" 
     echo -e "Use /etc/init.d/apache2 start/stop/restart to manage apache2 service."
@@ -47,9 +45,14 @@ if [ $yourPW = '' ]
 then
     echo "Please set up your password in this file."
 else
-    echo "Your password is $yourPW.\nStart installing......"
+    echo "Your password is $yourPW."
+    echo "Start installing......"
     setup
 fi
 
 
 #libapache2-mod-php php-mysql /service mysql restart/  /service apache2 restart/
+# theme : https://github.com/anmoljagetia/Flatabulous
+# zsh http://yijiebuyi.com/blog/b9b5e1ebb719f22475c38c4819ab8151.html
+# shadowsocks :https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97
+# apt-get remove fcitx-qimpannl
