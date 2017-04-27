@@ -21,6 +21,10 @@ setup (){
     sudo sh -c 'echo "<?php\nphpinfo()\n?>" >> /var/www/html/info.php'
     sudo /etc/init.d/apache2 restart
 
+    # edit /etc/php/7.0/apache2/php.ini ,delete ';' in lines "extension=php_mysqli.dll" ans "extension=php_pdo_mysql.dll". This 
+    # action will make php support mysql.
+
+
     #change sources to tsinghua's
     sudo rm -f /etc/apt/sources.list
     sudo sh -c 'echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe" >> /etc/apt/sources.list'
@@ -56,3 +60,15 @@ fi
 # zsh http://yijiebuyi.com/blog/b9b5e1ebb719f22475c38c4819ab8151.html
 # shadowsocks :https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97
 # apt-get remove fcitx-qimpannl
+
+# removed gnome-software
+#   sudo apt purge gnome-software
+# To add the old one back run
+#   sudo apt install software-center
+
+# indicator-sysmonitor ppa:
+#   sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor 
+
+# code blocks
+#   sudo add-apt-repository ppa:damien-moore/codeblocks-stable  
+#   sudo apt-get install codeblocks codeblocks-contrib
