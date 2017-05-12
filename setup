@@ -75,4 +75,5 @@ fi
 
 ## SSH RSA 
 # ssh-keygen -t rsa -C "f20140807@outlook.com"
-
+# git config --global user.name "dongfrancis"
+# git config --global user.email "f20140807@outlook.com"
