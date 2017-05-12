@@ -72,3 +72,7 @@ fi
 # code blocks
 #   sudo add-apt-repository ppa:damien-moore/codeblocks-stable  
 #   sudo apt-get install codeblocks codeblocks-contrib
+
+## SSH RSA 
+# ssh-keygen -t rsa -C "f20140807@outlook.com"
+
