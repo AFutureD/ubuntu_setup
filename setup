@@ -84,3 +84,13 @@ fi
 # npm config set registry https://registry.npm.taobao.org
 # sudo npm install hexo-generator-feed hexo-generator-searchdb word-
 # 
+=======
+## SSH RSA 
+# ssh-keygen -t rsa -C "f20140807@outlook.com"
+# git config --global user.name "dongfrancis"
+# git config --global user.email "f20140807@outlook.com"
+
+## shadosocks
+# sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
+# sudo apt-get update
+# sudo apt install shadowsocks-libev
