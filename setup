@@ -17,7 +17,7 @@ setup (){
 
     #start to install php and apache2
     sudo apt-get -y install apache2 
-    sudo apt-get -y install php5 libapache2-mod-php php-mysql
+    sudo apt-get -y install php libapache2-mod-php php-mysql
     sudo sh -c 'echo "<?php\nphpinfo()\n?>" >> /var/www/html/info.php'
     sudo /etc/init.d/apache2 restart
 
@@ -42,6 +42,11 @@ setup (){
     echo -e "All installations Over!!\n" 
     echo -e "Use /etc/init.d/apache2 start/stop/restart to manage apache2 service."
     echo -e "Use /etc/init.d/mysql start/stop/restart to manage database service.\nAnd,the administrator password would be $yourPW ."
+
+    # nodejs node npm
+
+    sudo apt-get -y install nodejs-legacy nodejs npm
+
 }
 
 
@@ -72,3 +77,10 @@ fi
 # code blocks
 #   sudo add-apt-repository ppa:damien-moore/codeblocks-stable  
 #   sudo apt-get install codeblocks codeblocks-contrib
+
+# hexo
+# sudo npm install hexo-cli -g
+# change the registry 
+# npm config set registry https://registry.npm.taobao.org
+# sudo npm install hexo-generator-feed hexo-generator-searchdb word-
+# 
