@@ -53,8 +53,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin']" 
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'libpinyin')]"
-gsettings set org.gnome.desktop.input-sources mru-sources "[('xkb', 'us'), ('ibus', 'libpinyin')]"
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'pinyin')]"
+gsettings set org.gnome.desktop.input-sources mru-sources "[('xkb', 'us'), ('ibus', 'pinyin')]"
 
 # Configure wallpapers
 gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Spices_in_Athens_by_Makis_Chourdakis.jpg'
