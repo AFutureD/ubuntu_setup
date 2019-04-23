@@ -49,7 +49,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize-or-overview
 gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action cycle-windows
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position LEFT
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin']" 
