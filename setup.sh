@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install_tsinghua() {
-    if [[ -f /etc/apt/sources.list ]]; then
+    if [ -f /etc/apt/sources.list ]; then
         sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
     else
         sudo touch /etc/apt/sources.list
