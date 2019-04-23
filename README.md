@@ -3,6 +3,6 @@
 ## Start with a command line
 ```
 
-sh -c "$(wget https://raw.githubusercontent.com/AFutureD/ubuntu_setup/master/setup.sh -O -)"
+> sudo bash -c "$(wget https://raw.githubusercontent.com/AFutureD/ubuntu_setup/master/setup.sh -O -)"
 
 ```
