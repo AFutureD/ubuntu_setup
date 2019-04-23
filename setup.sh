@@ -52,12 +52,12 @@ install_anaconda() {
     wget ${continuum_website}${latest_anaconda_steup} -O ./anacondaInstallScript.sh
     sudo mkdir -p /opt/anaconda3 && sudo chmod ugo+w /opt/anaconda3
     bash ./anacondaInstallScript.sh -f -b -p /opt/anaconda3
-
+    PATH=$PATH:/opt/anaconda3/bin
     # anaconda packages
-    execute /opt/anaconda3/bin/conda update conda -y
-    execute /opt/anaconda3/bin/conda clean --all -y
-    execute /opt/anaconda3/bin/conda install ipython -y
-    execute /opt/anaconda3/bin/pip install numpy scipy matplotlib scikit-learn scikit-image jupyter notebook pandas
+    conda update conda -y
+    conda clean --all -y
+    conda install ipython -y
+    pip install numpy scipy matplotlib scikit-learn scikit-image jupyter notebook pandas
 }
 
 install_torch() {
@@ -84,11 +84,12 @@ main(){
     install_basic
     # beautify
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/AFutureD/ubuntu_setup/master/beautify.sh)"
+    
     # install_anaconda
     # install_v2ray
 
     # effact zsh
     setup_zshrc
-    sudo chsh -s $(which zsh)
+    chsh -s $(which zsh)
 }
 main
