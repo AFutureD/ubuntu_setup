@@ -1,0 +1,29 @@
+{
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "debug"
+  },
+  "inbound": {
+    "port": 8080,
+    "listen": "127.0.0.1",
+    "protocol": "socks",
+    "settings": {
+      "auth": "noauth"
+    }
+  },
+  "outbound": {
+    "protocol": "shadowsocks",
+    "settings": {
+      "servers": [
+        {
+          "address": "host",
+          "method": "chacha20",
+          "ota": false,
+          "password": "passwd",
+          "port": 12388
+        }
+      ]
+    }
+  }
+}
